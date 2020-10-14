@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html3</title>
+</head>
+
+<body>
+
+    <div>
+        <h6 class="heading__Small1"> The Institute for Feminist Laughagenic Studies</h6>
+        <h5 class="heading__Small2"> <em>IDENTIFY. REGULATE. DEPLOY </em> </h5>
+    </div>
+
+    <div>
+        <img src="assets/gunLOGO.png" width="80" height="50" alt="pink toy gun with hahahehe written on it">
+    </div>
+
+    <br>
+    <br>
+
+    <h2>Batch Upload Laughsis Records</h2>
+    
+    <script>
+    function checkAndSubmit() {
+        if (document.getElementById('excel_specimens').value == "") {
+            alert ("Please choose a file to upload");
+        } else {
+            if (!document.getElementById('collecting_event').checked &&
+                !document.getElementById('specimen').checked) {
+                alert ("You must check at least one box!");
+            } else {
+                document.myform.submit();
+            }
+        }
+    }
+    </script>
+    <noscript>
+    <h1>NOTE: Please turn on javascript to use this page!</h1>
+    </noscript>
+    <table cellpadding="5"><tbody><tr><td>
+    
+    <b>Instructions to batch upload Excel records to Feminist Laughagenic Studies: </b>
+    
+    <ol>
+    
+    <li>Download the <a class=link href="index3_files/LaughsisTemplate.pdf" > Laughsis Template (note separate
+    tabs for collecting events and specimen records.) </a>
+
+    <br>
+    [Most recent file dated March 31, 2010.]
+    </li>
+    
+    <li>Delete or move any columns as desired EXCEPT for required fields (in yellow).
+    </li>
+    
+    <li>Fill out the Excel sheet and save it.</li>
+    
+    <li>Use the <b>Browse</b> button below to select the file to upload. 
+    </li><li>Click Submit.
+    </li><li>For help, look <a href="index3_files/LaughsisTemplae.html">here</a>.
+    </li></ol>
+    <b>Note:</b> Collector names must already by in the database when loading (<a href="http://biocode.berkeley.edu/people_add_upd.html">Add new collector</a>).
+    
+    <form name="myform" enctype="multipart/form-data" action="/cgi/biocode_excel_load" method="post">
+    <table border="" width="100%">
+    <tbody><tr><td><input size="70" type="file" id="excel_specimens" name="excel_specimens"></td>
+    </tr></tbody></table>
+    
+    <p>
+    <table width="100%">
+    <tbody><tr>
+    <td>
+    Choose at least one worksheet:
+    
+    <br><input type="checkbox" id="collecting_event" name="collecting_event" value="true">Collecting Events
+    
+    <br><input type="checkbox" id="specimen" name="specimen" value="true">Specimens
+    
+    </td>
+    
+    <td>
+    &nbsp;<p>
+    &nbsp;</p><p>
+    </p></td>
+    
+    <td valign="top">
+    Project Code
+    <select name="projectcode" size="1">
+    <option>CMPI</option>
+    <option>IRLA</option>
+    <option selected="">MBIO</option>
+    </select>
+    <br>
+    (Laughsis Biocode = MBIO)
+    </td>
+    </tr>
+    </tbody></table>
+    
+    </p><p>
+    
+    <br><input type="button" value="Submit" onclick="checkAndSubmit();"><input type="reset" value="Reset">
+    </p></form>
+        </td>
+        </tr>
+        </tbody></table>
+    
+    <p>
+    <br>
+    </p><p>
+    
+    
+    <!--#include virtual="headers_footers/footer.html" -->
+    </p></body></html>
+<body>
+
+
+    <script>
+        function checkAndSubmit() {
+            if (document.getElementById('excel_specimens').value == "") {
+                alert ("Please choose a file to upload");
+            } else {
+                if (!document.getElementById('collecting_event').checked &&
+                    !document.getElementById('specimen').checked) {
+                    alert ("You must check at least one box!");
+                } else {
+                    document.myform.submit();
+                }
+            }
+        }
+        </script>
+    
+</body>
+</html>
